@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task 3</title>
+</head>
+<body>
+    <h2>My JavaScript Task 3</h2>
+    <script>
+        function morph (num){
+            arr = [];
+            for(i = 1; i <= num; i++){
+                arr.push(i)
+            }
+        let mapped = arr.map(num => {
+            if(num % 2 === 0 && num %3 === 0 && num % 5 === 0){
+                return `yu-gi-oh`
+            } else if ( num % 2=== 0 && num % 3 === 0){
+                return `yu-gi`
+            } else if(num % 2 === 0 && num % 5 === 0 ){
+                return `yu-oh`
+            } else if (num % 3 ===0 && num % 5 === 0){
+                return `gi-oh`
+            } else if(num % 5 === 0){
+                return `oh`
+            } else if(num % 3 === 0){
+                return `gi`
+            } else if(num % 2 === 0){
+                return `yu`
+            } else {
+                return num
+            }
+        })
+        console.log( mapped)
+        }
+
+        morph(100)
+    </script>
+</body>
+</html>
